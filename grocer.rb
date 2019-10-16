@@ -11,13 +11,15 @@ def consolidate_cart(cart)
   item_names = {}
   cart.length.times { |i|
     if item_names[cart[i][:item]]
-      item_names[cart[i][:item]][:count] += 1
+    
     else
-      item_names[cart[i][:item]] = find_item_by_name_in_collection(cart[i][:item], cart)
-      item_names[cart[i][:item]][:count] = 1
+      item_names[cart[i][:item]] = {
+        :price => ,
+        :clearance => ,
+        :count =>
+      }
     end
   }
-  pp item_names
   item_names
 end
 
