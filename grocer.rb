@@ -29,8 +29,13 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  coupons.each{ |coupon|
-    
+  coupon_cart = cart
+  cart.each { |item|
+    coupons.each { |coupon|
+      if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
+        
+      end
+    }
   }
 end
 
