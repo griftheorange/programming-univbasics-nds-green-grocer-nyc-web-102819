@@ -61,4 +61,6 @@ def checkout(cart, coupons)
   cart.length.times {|i|
     total += cart[i][:price]*cart[i][:count]
   }
+  if total > 100
+    total *= 0.9
 end
