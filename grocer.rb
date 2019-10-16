@@ -49,9 +49,9 @@ end
 def apply_clearance(cart)
   cart.length.times {|i|
     if cart[i][:clearance]
-      cart[i][:price] *= 0.8
+      cart[i][:price] = (cart[i][:price]*0.8).round(2)
     end
-  }
+    cart
 end
 
 def checkout(cart, coupons)
