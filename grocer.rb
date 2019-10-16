@@ -13,6 +13,7 @@ def consolidate_cart(cart)
     item_names.append(item[:item])
   }
   item_names_uniq = item_names.uniq
+  item_names.length.times
   
   
 end
