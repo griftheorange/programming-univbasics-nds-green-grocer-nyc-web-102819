@@ -9,11 +9,14 @@ end
 
 def consolidate_cart(cart)
   item_names = []
+  item_count_hash = {}
   cart.each{ |item|
     item_names.append(item[:item])
   }
   item_names_uniq = item_names.uniq
-  item_names.length.times
+  item_names_uniq.length.times { |i|
+    item_count_hash[item_names_uniq]
+  }
   
   
 end
