@@ -11,11 +11,11 @@ def consolidate_cart(cart)
   item_names = {}
   cart.length.times { |i|
     if item_names[cart[i][:item]]
-    
+      item_names[cart[i][:item]] += 1
     else
       item_names[cart[i][:item]] = {
-        :price => ,
-        :clearance => ,
+        :price => cart[i][:price],
+        :clearance => cart[i][:clearance],
         :count => 1
       }
     end
