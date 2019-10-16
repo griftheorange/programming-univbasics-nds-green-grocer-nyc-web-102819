@@ -22,6 +22,7 @@ def consolidate_cart(cart)
   item_names_uniq.length.times { |i|
     hash = find_item_by_name_in_collection(item_names_uniq[i], cart)
     hash[:count] = item_count_hash[item_names_uniq[i]]
+    consolidated_cart.append(hash)
   }
   
   
