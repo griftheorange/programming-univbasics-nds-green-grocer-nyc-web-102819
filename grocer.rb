@@ -56,7 +56,7 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  cart = apply_clearance(apply_coupons(consolidate_cart(cart)))
+  cart = apply_clearance(apply_coupons(consolidate_cart(cart)), coupons)
   total = 0
   cart.length.times {|i|
     total += cart[i][:price]*cart[i][:count]
