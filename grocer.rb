@@ -29,9 +29,17 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  applied_coupon_hash = {}
+  coupon_applied_cart = cart
   cart.length.times { |i|
-    coupons.length.times { |i|
-      
+    coupons.length.times { |j|
+      if cart[i][:item] == coupon[j][:item] && coupon[j][:num] >= cart[i][:count]
+        if applied_coupon_hash[cart[i][:item]]
+          
+        else
+          
+        end
+      end
     }
   }
 end
