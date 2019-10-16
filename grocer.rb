@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
         if applied_coupon_hash[cart[i][:item]]
           
         else
-          
+          applied_coupon_hash["#{cart[i][:item]} W/ AVOCADO"] => cart.length+1
         end
       end
     }
