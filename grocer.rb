@@ -30,10 +30,16 @@ end
 
 def apply_coupons(cart, coupons)
   coupon_cart = cart
-  cart.each_with_index { |item|
-    coupons.each_with_index { |coupon|
+  cart.each_with_index { |item, i|
+    coupons.each { |coupon|
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
-        coupon_cart
+        coupon_cart[i][:count] -= coupon[:num]
+        coupon_cart.append({
+          :item => "#{item[:item]} W/ COUPON",
+          :price => coupon[:price]/coupon[:num],
+          :clearance => item[:clearance],
+          :count => coupon[:num]
+        })
       end
     }
   }
