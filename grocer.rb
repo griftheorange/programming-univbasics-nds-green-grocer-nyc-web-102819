@@ -16,7 +16,7 @@ def consolidate_cart(cart)
       item_names[cart[i][:item]] = {
         :price => ,
         :clearance => ,
-        :count =>
+        :count => 1
       }
     end
   }
