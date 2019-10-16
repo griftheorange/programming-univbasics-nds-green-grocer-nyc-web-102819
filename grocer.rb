@@ -18,7 +18,10 @@ def consolidate_cart(cart)
     item_count_hash[item_names_uniq[i]] = item_names.count(item_names_uniq[i])
   }
   
-  
+  consolidated_cart = []
+  item_names_uniq.length.times { |i|
+    
+  }
   
   
 end
