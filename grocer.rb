@@ -25,6 +25,8 @@ def consolidate_cart(cart)
     consolidated_cart.append(hash)
   }
   
+  consolidated_cart
+  
   
 end
 
