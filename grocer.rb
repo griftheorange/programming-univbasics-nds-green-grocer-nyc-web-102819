@@ -47,7 +47,11 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  
+  cart.length.times {|i|
+    if cart[i][:clearance]
+      cart[i][:price] *= 
+    end
+  }
 end
 
 def checkout(cart, coupons)
