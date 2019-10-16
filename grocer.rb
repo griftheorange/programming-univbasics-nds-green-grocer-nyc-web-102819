@@ -32,13 +32,13 @@ def apply_coupons(cart, coupons)
   coupon_applied_cart = cart
   cart.length.times { |i|
     coupons.length.times { |j|
-      if cart[i][:item] == coupon[j][:item] && coupon[j][:num] >= cart[i][:count]
-        coupon_applied_cart[i][:count] -= coupon[j][:num]
+      if cart[i][:item] == coupons[j][:item] && coupons[j][:num] >= cart[i][:count]
+        coupon_applied_cart[i][:count] -= coupons[j][:num]
         coupon_applied_cart.append({
           :item => "#{cart[i][:item]} W/ COUPON",
-          :price => (coupon[j][:cost])/(coupon[j][:num]),
+          :price => (coupons[j][:cost])/(coupons[j][:num]),
           :clearance => cart[i][:clearance],
-          :count => coupon[j][:num]
+          :count => coupons[j][:num]
         })
       end
     }
