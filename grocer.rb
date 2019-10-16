@@ -29,9 +29,9 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  coupons.each{ |coupon|
+    
+  }
 end
 
 def apply_clearance(cart)
