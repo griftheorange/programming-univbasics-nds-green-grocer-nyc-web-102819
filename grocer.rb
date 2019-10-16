@@ -1,7 +1,7 @@
 def find_item_by_name_in_collection(name, collection)
   collection.each{ |item|
     if item[:item] == name
-      return item[:item]
+      return item
     end
   }
   nil
