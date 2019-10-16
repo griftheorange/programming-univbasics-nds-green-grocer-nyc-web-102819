@@ -9,6 +9,9 @@ end
 
 def consolidate_cart(cart)
   item_names = []
+  cart.each{ |item|
+    item_names.append(item[:item])
+  }
 end
 
 def apply_coupons(cart, coupons)
