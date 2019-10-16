@@ -8,11 +8,15 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  item_names = []
+  item_names = {}
   cart.length.times { |i|
-    item_names[i] = cart[i][:item]
+    if item_names[cart[i][:item]]
+      
+    else
+      item_names[cart[i][:item]] = find_item_by_name_in_collection(cart[i][:item], cart)
+      item_names[cart[i][:item]][:count] = 1
+    end
   }
-  item_names = item_names.uniq
 end
 
 def apply_coupons(cart, coupons)
