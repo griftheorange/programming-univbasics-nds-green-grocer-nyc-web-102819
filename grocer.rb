@@ -30,8 +30,8 @@ end
 
 def apply_coupons(cart, coupons)
   coupon_cart = cart
-  cart.each { |item|
-    coupons.each { |coupon|
+  cart.each_with_index { |item|
+    coupons.each_with_index { |coupon|
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         coupon_cart
       end
