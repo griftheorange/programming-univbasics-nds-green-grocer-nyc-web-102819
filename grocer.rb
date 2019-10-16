@@ -29,6 +29,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  pp coupons
   coupon_applied_cart = cart
   cart.length.times { |i|
     coupons.length.times { |j|
