@@ -17,6 +17,7 @@ def consolidate_cart(cart)
       item_names[cart[i][:item]][:count] = 1
     end
   }
+  pp item_names
   item_names
 end
 
