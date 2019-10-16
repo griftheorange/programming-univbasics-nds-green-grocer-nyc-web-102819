@@ -43,9 +43,6 @@ def apply_coupons(cart, coupons)
       end
     }
   }
-  pp cart
-  pp coupons
-  pp coupon_applied_cart
   coupon_applied_cart
 end
 
