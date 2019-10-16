@@ -12,7 +12,9 @@ def consolidate_cart(cart)
   cart.each{ |item|
     item_names.append(item[:item])
   }
-  item_names = item_names.uniq
+  item_names_uniqem_names.uniq
+  
+  
 end
 
 def apply_coupons(cart, coupons)
