@@ -44,8 +44,8 @@ def apply_coupons(cart, coupons)
     }
   }
   pp cart
-  puts coupons
-  puts coupon_applied_cart
+  pp coupons
+  pp coupon_applied_cart
   coupon_applied_cart
 end
 
