@@ -29,8 +29,11 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  pp cart
-  pp coupons
+  cart.length.times { |i|
+    coupons.length.times { |i|
+      
+    }
+  }
 end
 
 def apply_clearance(cart)
