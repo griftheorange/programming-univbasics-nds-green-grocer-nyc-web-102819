@@ -12,6 +12,7 @@ def consolidate_cart(cart)
   cart.length.times { |i|
     item_names[i] = cart[i][:item]
   }
+  item_names = item_names.uniq
 end
 
 def apply_coupons(cart, coupons)
