@@ -8,7 +8,7 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  item_names = {}
+  item_names = []
   cart.length.times { |i|
     if item_names[cart[i][:item]]
       item_names[cart[i][:item]] += 1
