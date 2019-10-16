@@ -20,7 +20,7 @@ def consolidate_cart(cart)
       }
     end
   }
-  puts item_names
+  
   item_names
 end
 
